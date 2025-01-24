@@ -31,8 +31,7 @@ body {
   cursor: pointer;
 }
 
-.filled,
-.star:hover {
+.filled {
   transform: scale(1.1);
 }
 
