@@ -9,4 +9,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #100e10;
+}
+
+.rating {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.filled,
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star-filled,
+.star-empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 48px;
+  height: 48px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: clip-path 0.2s ease;
+}
+
+.star-filled {
+  background-image: url('/star/star-input_filled.svg');
+  clip-path: inset(0 100% 0 0); /* default 상태는 채워진 별은 가려진 상태 */
+}
+
+.star-empty {
+  background-image: url('/star/star-input_empty.svg');
 }
